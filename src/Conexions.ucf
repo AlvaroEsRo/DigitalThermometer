@@ -1,0 +1,23 @@
+# Main system clock
+NET "CLK_50MHz" LOC = "M6"; # 50 MHz system clock signal
+
+# Display connections
+NET "SEG7<0>" LOC = "L14"; # Signal = CA
+NET "SEG7<1>" LOC = "H12"; # Signal = CB
+NET "SEG7<2>" LOC = "N14"; # Signal = CC
+NET "SEG7<3>" LOC = "N11"; # Signal = CD
+NET "SEG7<4>" LOC = "P12"; # Signal = CE
+NET "SEG7<5>" LOC = "L13"; # Signal = CF
+NET "SEG7<6>" LOC = "M12"; # Signal = CG
+NET "DP" LOC = "N13";      # Decimal point
+
+# Display activation signals
+NET "AN<0>" LOC = "K14"; # Activation of display 0 = AN0
+NET "AN<1>" LOC = "M13"; # Activation of display 1 = AN1
+NET "AN<2>" LOC = "J12"; # Activation of display 2 = AN2
+NET "AN<3>" LOC = "F12"; # Activation of display 3 = AN3
+
+# Inputs and outputs
+NET "SPI_DATA" LOC="A3"; # Data input to input 2
+NET "SPI_CS" LOC="B9";   # Chip Select output to output 15
+NET "SPI_CLK" LOC="A9";  # Clock output to output 14
