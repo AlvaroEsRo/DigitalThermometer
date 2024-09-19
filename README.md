@@ -30,6 +30,7 @@
 │   ├── Termometro.vhd             # Interconnect all the previous modules      
 │   └── asociaciones.ucf           # Connects the digital hardware with the FPGA components
 │
+├── README.md
 └── 
 
 
