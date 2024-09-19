@@ -16,21 +16,33 @@
 4. **Display**: The temperature is shown on a 7-segment display in real-time.
 
 ## 📂 Project Structure:
-```bash
-├── src/
-│   ├── ADC_A_TEMP.vhd             # ADC data conversion to temperature
-│   ├── div_frec.vhd               # Divides 50MHz clock to 1kHz
-│   ├── aut_control.vhd            # Receiver control state machine
-│   ├── TEMP_a_BCD.vhd             # Converts binary data to BCD for display
-│   ├── Visualizacion.vhd/         # Controls the 7-segment display output
-│       └── decodBCDa7s.vhd        # BCD to 7-segment decoder
-│       └── MUX4x4.vhd             # 4-input 4-bit multiplexer
-│       └── Refresco.vhd           # Refresh the displays periodically
-│       └── Registro.vhd           # Stores the data of TENS, UNITS, and DECIMALS each time ENABLE is activated
-│   ├── Termometro.vhd             # Interconnect all the previous modules      
-│   └── asociaciones.ucf           # Connects the digital hardware with the FPGA components
-│
-├── README.md
-└── 
 
+├── src/
+
+│   ├── [ADC_to_TEMP.vhd](./src/ADC_to_TEMP.vhd)        # ADC data conversion to temperature
+
+│   ├── [freq_div.vhd](./src/freq_div.vhd)               # Divides 50MHz clock to 1kHz
+
+│   ├── [aut_control.vhd](./src/aut_control.vhd)        # Receiver control state machine
+
+│   ├── [TEMP_to_BCD.vhd](./src/TEMP_to_BCD.vhd)        # Converts binary data to BCD for display
+
+│   ├── Visualization/                                 # Contains the visual part
+
+   │       ├── [decodBCDa7s.vhd](./src/Visualization/decodBCDa7s.vhd)  # BCD to 7-segment decoder
+
+   │       ├── [MUX4x4.vhd](./src/Visualization/MUX4x4.vhd)         # 4-input 4-bit multiplexer
+
+   │       ├── [Refresh.vhd](./src/Visualization/Refresh.vhd)        # Refresh the displays periodically
+
+   │       ├── [Register.vhd](./src/Visualization/Register.vhd)      # Stores the data 
+
+   │       └── [Visualization.vhd](./src/Visualization/Visualization.vhd) # Controls the 7-segment display output
+
+│   ├── [Thermometer.vhd](./src/Thermometer.vhd)         # Interconnect all the previous modules
+
+│   └── [conexions.ucf](./src/conexions.ucf)            # Connects the digital hardware with the FPGA components
+
+│
+├── [README.md](./README.md)
 
